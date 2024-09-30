@@ -1,0 +1,571 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  rgb(241, 243, 251);
+    color: black;
+    font-family: "poppins", sans-serif;
+    padding: 0 12%;
+}
+header{
+    position: sticky;
+    top: 0;
+    /* z index le chai sticky huda kheri mathi tyo marqueema bhako elements jun float bhayera dekhauchha teslai hatauchha ra navbar lai reserve garera sticky paarchha */
+    z-index: 1%;
+}
+/* nav starts */
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(196, 207, 238);
+    margin-top: 2rem;
+}
+
+.navlinks{
+    width:35% ;
+}
+.navlinks ul{
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+}
+ul a{
+    text-decoration: none;
+    color:black;
+}
+ul a:hover{
+    color: rgb(62, 36, 208);
+
+}
+.navlinks li a{
+    display: block;     /* Makes the entire area clickable */  
+    text-decoration: none;
+}
+
+
+.navlinks li {
+    position: relative; /* Needed for absolute positioning of the ::after */
+    list-style: none;   /* Removes default bullet points */
+    padding: 0;         /* Remove padding to avoid extra gap */
+    margin: 0;      /* Adds some padding for better clickability */
+    transition: color 0.3s;
+}
+
+.navlinks li::after {
+    content: "";              
+    position: absolute;       
+    left: 0;                
+     bottom:-1;             
+    width: 0;                
+    height: 4px;             
+     
+    transition: width 0.3s;  
+}
+
+.navlinks li:hover::after,
+.navlinks li:active::after,
+.navlinks li:focus::after {
+    width: 100%; 
+            
+    background-color:rgb(62, 36, 208);   /* Change color on hover and focus */
+}
+.navlinks li a:hover,
+.navlinks li a:focus,
+.navlinks li a:active {
+    color: rgb(62, 36, 208);  /* Text color changes on hover/focus/active */
+}
+
+
+.hire button{
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgb(88, 88, 88);
+    background-color: rgb(62, 36, 208);
+    cursor: pointer;
+}
+.hire a{
+    text-decoration: none;
+    color: white;
+}
+.hire button:hover{
+
+    cursor: pointer;
+    background-color: black;
+
+}
+
+/* main starts */
+
+.boxes{
+    display: flex;
+    margin-top: 2rem;
+
+}
+.box2{
+    height: 500px;
+    width: 400px;
+    border-radius:20px ;
+    background-color:  rgb(241, 243, 251);
+}
+.box2 img{
+    height: 420px;
+    margin-left: 0rem;
+    border-radius: 2rem;
+}
+.box2 h2{
+    text-align: center;
+}
+.box2 p{
+    text-align: center;
+    margin-top: 1rem;
+    color: #B3BEC5;
+}
+.info{
+    color:rgb(62, 36, 208); ;
+}
+.icons ul{
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center;
+    gap: 30px;
+    list-style-type: none;
+    margin-top: 1.5rem;
+}
+.icons li{
+    border: 1px solid rgb(54, 53, 53);
+    height: 40px;
+    width: 35px;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.bigbox{
+    width: 97%;
+    height: 80%;
+    background-color:  rgb(241, 243, 251);
+    border-radius: 1.5rem;
+   
+    
+}
+
+.bigbox p{
+    padding: 2rem 0 0 1.5rem;
+    color: rgb(26, 6, 141);
+    /* text-align: center; */
+
+}
+.bigbox h1{
+    padding: 1rem;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 400;
+    text-wrap: wrap;
+    /* text-align: center; */
+}
+
+
+.btn button{
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgb(51,43,43);
+    background-color: rgb(62, 36, 208);
+    color: white;
+    font-size: medium;
+    margin: 1rem 0 0 1rem;
+    
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+.btn button:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+/* about starts here */
+
+.aboutcontent{
+    height: 80%;
+    width: 100%;
+    background-color: rgb(241, 243, 251);
+    margin-top: 1rem;
+    padding: 4rem;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    border-radius: 1.5rem;
+    
+
+}
+.aboutcontent h1{
+    padding: 1rem;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 400;
+    text-wrap: wrap;
+    /* text-align: center; */
+}
+.aboutcontent p{
+    color: rgb(26, 6, 141);
+    text-align: center;
+    margin: 2rem 0;
+
+}
+.aboutcontent a{
+    text-decoration: none;
+    color: white;
+}
+.abinfo{
+    width: 70%;
+    text-align: center;
+}
+
+
+/* connection here */
+.connection{
+    height: 80%;
+    width: 100%;
+    background-color: rgb(241, 243, 251);
+    margin-top: 1rem;
+    padding: 4rem;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    border-radius: 1.5rem;
+
+}
+.connection h1{
+    padding: 1rem;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 400;
+    text-wrap: wrap;
+    /* text-align: center; */
+}
+.connection p{
+    color: rgb(26, 6, 141);
+    text-align: center;
+    margin: 2rem 0;
+
+}
+.connection a{
+    text-decoration: none;
+    color: white;
+}
+.connect-info{
+    width: 70%;
+    text-align: center;
+}
+.iconsss ul{
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center;
+    gap: 30px;
+    list-style-type: none;
+    margin-top: 1.5rem;
+}
+.iconsss li{
+    border: 1px solid rgb(54, 53, 53);
+    height: 40px;
+    width: 35px;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+/* icons hover effect */
+.icons li, .iconsss li {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.icons li:hover, .iconsss li:hover {
+    transform: scale(1.2);
+    /* background-color: rgb(62, 36, 208); */
+}
+
+li i{
+    color: black;
+}
+.connect{
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgb(51,43,43);
+    background-color:rgb(62, 36, 208) ;
+    color: white;
+    font-size: medium;
+    margin: 1rem 0 0 0;
+    
+
+}
+.connect:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.hire button, .btn button, .connect, .msg-btn button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hire button:hover, .btn button:hover, .connect:hover, .msg-btn button:hover {
+    background-color: black;
+    transform: translateY(-5px);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+body {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+/* contact page starts */
+.contactpage{
+    background-color: rgb(241, 243, 251);
+    padding: 3rem 2rem 5rem 2rem;
+    border-radius: 1.5rem;
+    
+}
+.contactpage h1{
+    text-align: center;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 400;
+    text-wrap: wrap;
+}
+
+.contactdetail{
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+    /* height: 90%; */
+
+}
+.contactinfo{
+    border: 1px solid #4d4d51;
+    /* padding: 4rem 2rem; */
+    padding: 3rem;
+    border-radius: 1rem;
+    width: 30%;
+    
+    
+}
+.contactinfo i{
+    color:rgb(62, 36, 208) ;
+}
+.location{
+    padding-bottom: 2rem;
+}
+.phnum{
+    padding-bottom: 2rem;
+}
+
+.text1{
+    padding: 0.2rem 0;
+    color: black;
+    font-weight: 600;
+    
+}
+.text2{
+    color: rgb(143, 138, 138);
+}
+.contactform{
+    border: 1px solid #4d4d51;
+    padding: 3rem;
+    border-radius: 1rem;
+    width: 70%;
+    height: 25rem;
+    
+}
+.name-email{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(26, 6, 141);
+}
+.name-email input{
+    height: 3rem;
+    width: 15rem;
+    border-radius: 0.5rem;
+}
+.msg{
+    color: rgb(26, 6, 141);
+    margin-top: 2rem;
+    text-align: center;
+}
+.msg textarea{
+    height: 5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.msg-btn button{
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgb(51,43,43);
+    background-color:rgb(62, 36, 208) ;
+    color: white;
+    font-size: medium;
+    margin: 2rem 0 2rem 0;
+    cursor: pointer;
+}
+/* Custom alert modal styles */
+.custom-alert {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 999; /* Always on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.custom-alert-content {
+    position: relative;
+    top: 40%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#close-alert {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgb(62, 36, 208);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+/* about page */
+.whole{
+    display: flex;
+    column-gap: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+
+}
+.pic{
+    background-color: rgb(241, 243, 251);
+    width: 40%;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    
+}
+.pic img{
+    height: 35rem;
+    margin-left: 1rem ;
+    border-radius: 2rem;
+
+}
+.ritisha-info{
+   
+    width: 60%;
+    border-radius: 1.5rem;
+    padding: 2rem;
+
+    background-color: rgb(241, 243, 251);
+
+}
+.ritisha-info h1{
+    
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 400;
+    text-wrap: wrap;
+    margin-bottom: 1rem;
+
+}
+.ritisha-info p{
+    color: rgb(26, 6, 141);
+}
+.call button{
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgb(51,43,43);
+    background-color:#EB5D3A ;
+    color: white;
+    font-size: medium;
+    margin: 2rem 0 2rem 0;
+    cursor: pointer;
+}
+
+/* projects here */
+.works{
+ 
+    background-color: rgb(241, 243, 251);
+    margin-top: 1rem;
+    /* padding: 1rem; */
+    margin-bottom: 2rem;
+    border-radius: 1.5rem;
+  }
+  .maincard{
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem 4rem;
+      justify-content: center;
+  }
+  .worksandprojects{
+      /* width: 70%; */
+      text-align: center;
+      margin:1.5rem 0 ;
+  }
+  
+  .works h1{
+      padding: 1rem;
+      font-size: 40px;
+      line-height: 50px;
+      font-weight: 400;
+      text-wrap: wrap;
+  }
+  .works p{
+      color: rgb(26, 6, 141);
+      /* text-align: center; */
+      margin: 1.5rem 0;
+  
+  }
+  
+  .smcard{
+      height: 300px;
+      width: 300px;
+      border: 1px solid rgb(51,43,43);
+      border-radius: 1rem;
+      text-align: center;
+      
+  }
+  .smcard span{
+      color:rgb(26, 6, 141);
+  }
+  .smcard h3{
+      font-weight: 400;
+  }
+  .smproject img{
+      height: 100%;
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 1rem;
+  }
+
+/* footer here */
+footer{
+    text-align: center;
+}
+
